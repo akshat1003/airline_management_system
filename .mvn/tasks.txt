@@ -1,0 +1,42 @@
+Tasks - 14 July
+Complete the task of 13 July.
+Create a new spring-boot project on Flight Management System.
+(use a new git repo)
+Some Metadata
+You are required to work on 2 entities → flights and tickets
+Flight - You have to create the entity in such a way
+ as to store information like flight number, origin, destination,
+ flight type(international or domestic),
+ departure time, expected arrival time,
+  number of seats, number of booked seats etc.
+Ticket - Ticket should have relevant fields like ticket
+ number and user details.
+One flight can have many tickets (apply join accordingly)
+
+APIs required:
+API to create a new flight.
+API to get details of a flight using flight number or id.
+API to get the list of all flights with support of filters
+(Please see point `e` for list of filters to be provided).
+API to get the number of vacant seats available on a flight.
+API to book a ticket for a flight.
+
+Additional features to be implemented:
+You have to keep an audit history of all your tables.
+Use builder(lombok) and mapper(mapstruct).
+You have to write all native queries (except for save).
+
+Note:
+A flight can have a limited number of seats which is defined
+ when creating a new flight record. Once all seats are filled,
+ you should not allow any more bookings.
+Booking a flight essentially means generating a new ticket
+for that flight.
+
+Filters required on following fields in flight list api
+Flight number
+Id
+Origin
+Destination
+Flight Type
+Future Flight (to fetch all flights whose departure is in future)
